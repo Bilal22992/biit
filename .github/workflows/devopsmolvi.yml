@@ -7,14 +7,13 @@ on:
 jobs:
   Build-App:
     runs-on: ubuntu-latest
-    env:
-      BUILD_NUMBER: ${{ github.run_number }}
+
     steps:
       - uses: actions/checkout@v4    
 
       - name: Build the Docker Image
         run: |
-         docker build . --tag 559050236729.dkr.ecr.us-east-1.amazonaws.com/dev/nodeimages:$BUILD_NUMBER
+         docker build . --tag 559050236729.dkr.ecr.us-east-1.amazonaws.com/dev/nodeimages:latest
          
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -29,6 +28,6 @@ jobs:
 
       - name: Push the Image to AWS ECR
         run: |
-            docker push 559050236729.dkr.ecr.us-east-1.amazonaws.com/dev/nodeimages:$BUILD_NUMBER
+            docker push 559050236729.dkr.ecr.us-east-1.amazonaws.com/dev/nodeimages:latest
 
             
