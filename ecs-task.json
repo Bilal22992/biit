@@ -1,10 +1,10 @@
 {
-  "family": "node-ecs",
+  "family": "sharks-ecs",
   "networkMode": "awsvpc",
   "executionRoleArn": "arn:aws:iam::559050236729:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "nodeapp",
+      "name": "sharks-ecs",
       "image": "559050236729.dkr.ecr.us-east-1.amazonaws.com/dev/nodeimages:latest",
       "essential": true,
       "portMappings": [
@@ -17,6 +17,6 @@
     }
   ],
   "requiresCompatibilities": ["FARGATE"],
-  "cpu": "256",
-  "memory": "512"
+  "cpu": "512",
+  "memory": "1024"
 }
