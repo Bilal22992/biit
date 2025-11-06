@@ -1,5 +1,5 @@
 {
-  "family": "nodeapp-ecs",
+  "family": "nodeapp-task",
   "networkMode": "awsvpc",
   "executionRoleArn": "arn:aws:iam::468907522523:role/ecsTaskExecutionRole",
   "containerDefinitions": [
