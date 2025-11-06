@@ -1,16 +1,15 @@
 {
-  "family": "devopsmolvi-ecs",
+  "family": "nodeapp-ecs",
   "networkMode": "awsvpc",
-  "executionRoleArn": "arn:aws:iam::559050236729:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::468907522523:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "devopsmolvi-ecs",
-      "image": "559050236729.dkr.ecr.us-east-1.amazonaws.com/dev/nodeimages:latest",
+      "name": "nodeapp",
+      "image": "468907522523.dkr.ecr.ap-southeast-1.amazonaws.com/nodeapp:latest",
       "essential": true,
       "portMappings": [
         {
-          "containerPort": 8080,
-          "hostPort": 8080,
+          "containerPort": 3000,
           "protocol": "tcp"
         }
       ]
