@@ -81,6 +81,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ecs-task.json
-          service: nodeapp-task-service-d74sqlel
-          cluster: frank-hippopotamus-lkyw0p
+          service: nnodeapp-ecs-service-s9oqa9u5
+          cluster: peaceful-bird-66wf2w
           wait-for-service-stability: true
